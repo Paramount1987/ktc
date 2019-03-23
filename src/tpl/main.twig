@@ -4,11 +4,19 @@
 
 <div class="content">
 
-    <div class="container">
+    <div class="container pb-5">
         {% include "tpl/inc/components/catalog.twig" %}
     </div>
 
-    {% include "tpl/inc/components/news-slider.twig" %}
+    <div class="bg-white py-3">
+        <div class="container">
+            {% include "tpl/inc/pages/main/intro-about.twig" %}
+        </div>
+    </div>
+
+    <div class="pt-5">
+        {% include "tpl/inc/components/news-slider.twig" %}
+    </div>
 </div>
 
 {% endblock %}

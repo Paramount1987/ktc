@@ -1,0 +1,22 @@
+{% set lists = [
+    {
+        img: 'images/content/shape-1.png',
+        text: 'Производство техники по разработкам собственной научно-исследовательской базы'
+    },
+    {
+        img: 'images/content/shape-2.png',
+        text: 'Ремонт и внесение любых конструктивных изменений в технику'
+    },
+    {
+        img: 'images/content/shape-3.png',
+        text: 'Изготовление отдельных изделий из металла и порошковая окраска'
+    }
+] %}
+<div class="ctx-card-list">
+    {% for item in lists %}
+    <div class="ctx-card">
+        <div class="ctx-card__img" style="background-image: url('{{item.img}}')"></div>
+        <div class="ctx-card__text">{{ item.text }}</div>
+     </div>
+    {% endfor %}
+</div>
