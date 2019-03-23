@@ -9,7 +9,9 @@ var browserSync = require('browser-sync').create();
 //----------------------------------------------------------------
 function taskTemplate() {
     return gulp.src('./src/tpl/*.twig', { since: gulp.lastRun('templates') })
-        .pipe(twig())
+        .pipe(twig({
+            base: './src/'
+        }))
         .pipe(gulp.dest('./dist'));
 }
 gulp.task('templates', taskTemplate);

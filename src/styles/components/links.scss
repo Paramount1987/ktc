@@ -1,0 +1,17 @@
+.link-logo {
+    display: block;
+    width: 75px;
+    text-decoration: none;
+
+    &__img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .link-logo {
+        width: 115px;
+    }
+}

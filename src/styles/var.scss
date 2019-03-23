@@ -20,7 +20,7 @@ $spacers: map-merge((
 $white:    #fff !default;
 $black:    #000 !default;
 
-$blue:    #007bff !default;
+$blue:    #0091ff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -31,13 +31,17 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
+$dark: #282b30;
+$gray: #eaedf3;
+
 // stylelint-enable
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
+$body-bg:                   $gray;
+$body-color:                $dark;
 
 // Links
 //
@@ -70,9 +74,9 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-        sm: 720px,
-        md: 960px,
-        lg: 1140px
+        sm: 960px,
+        md: 1200px,
+        lg: 1320px
 ) !default;
 
 //@include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -80,11 +84,14 @@ $container-max-widths: (
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
+$font-Montserrat: 'Montserrat';
+$font-weight-base: 400;
+$line-height-base: 1.8;
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-base:            $font-Montserrat;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              13px !default; // Assumes the browser default, typically `16px`

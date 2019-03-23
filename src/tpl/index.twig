@@ -1,10 +1,30 @@
-{% extends './inc/page.twig' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>KTC</title>
+        <link rel="stylesheet" href="css/style.css?{{ date().getTime() }}" />
+    </head>
+    <body>
+        {% set pages = [ { link: 'main', name: 'Главная' } ] %}
 
-{% block content %}
-	<div class="container">
-		<h1>Webpack 3! Twig!</h1>
+        <div class="wrapper">
+            <div class="container">
+                <h1>KTC pages</h1>
 
-		<a href="components.html">Components!</a>
-	</div>
-
-{% endblock %}
+                <ul>
+                    {% for page in pages %}
+                    <li>
+                        <a href="{{ page.link }}.html" class="page-link">{{ page.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
