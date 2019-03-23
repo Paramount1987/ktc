@@ -1,0 +1,120 @@
+.news-slider {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 0 80px 20px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: auto;
+    padding: 0 0 20px 0;
+    background-color: $white;
+    color: $dark;
+    text-decoration: none;
+
+    &:hover {
+        .news-card__arrow {
+            opacity: 1;
+            transform: translateX(10px);
+        }
+        .news-card__title {
+            color: $blue;
+        }
+    }
+
+    &-body {
+        padding: 15px 20px;
+    }
+    &-bottom {
+        position: relative;
+        margin-top: auto;
+        padding: 0 20px;
+    }
+
+    &__img {
+        height: 140px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+    &__descr {
+        font-size: 11px;
+        line-height: 1.6;
+        color: $black;
+    }
+    &__date {
+        color: $blue;
+        font-weight: 600;
+        font-size: 9px;
+    }
+    &__arrow {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 30px;
+        color: $blue;
+        opacity: 0;
+        transition: all .15s
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .news-slider {
+        padding: 0 20px 80px 20px;
+    }
+
+    .news-card {
+        padding-bottom: 30px;
+        &--no-img {
+            padding-top: 20px;
+        }
+        &-body {
+            padding: 30px;
+        }
+        &-bottom {
+            padding: 0 30px;
+        }
+        &__img {
+            height: 250px;
+        }
+        &__title {
+            margin-bottom: 35px;
+            font-size: 20px;
+        }
+        &__descr {
+            font-size: 13px;
+        }
+        &__date {
+            font-size: 13px;
+        }
+        &__arrow {
+            right: 40px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+
+    .news-card {
+        &-body {
+            padding: 30px 50px;
+        }
+        &-bottom {
+            padding: 0 50px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__arrow {
+            right: 60px;
+        }
+    }
+}
