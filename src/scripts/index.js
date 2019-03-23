@@ -13,7 +13,9 @@ require('./utils/index');
 // components
 //----------------------------------------------
 import News from './components/news';
+import IntroSlider from './components/intro-slider';
 
 $(document).ready(() => {
+    IntroSlider.init();
     News.init();
 });

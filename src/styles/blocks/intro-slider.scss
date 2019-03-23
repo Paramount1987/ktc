@@ -1,0 +1,100 @@
+.intro-slider {
+    position: relative;
+    height: 100vh;
+    min-height: 568px;
+
+    &__title {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $dark;
+        font-weight: 700;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+.intro-slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 110px 20px 0 20px;
+
+    &-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        color: $white;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .ia-card {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .intro-slider {
+        height: 768px;
+        &__title {
+            max-width: 1280px;
+            margin: 0 auto;
+            top: 200px;
+            left: 100px;
+            text-align: left;
+            font-size: 22px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: block;
+        }
+    }
+    .intro-slide {
+        padding: 260px 20px 0 100px;
+        &__title {
+            max-width: 420px;
+            margin-bottom: 50px;
+            font-size: 36px;
+            text-align: left;
+        }
+        .ia-card {
+            position: relative;
+            z-index: 1;
+            left: -40px;
+            display: block;
+            width: 320px;
+            &__num {
+                font-size: 72px;
+            }
+            &__text {
+                padding-left: 20px;
+                font-size: 15px;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .intro-slider {
+        &__title {
+            left: 0;
+            padding-left: 40px;
+        }
+    }
+}
