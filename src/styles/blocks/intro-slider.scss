@@ -17,6 +17,10 @@
         font-weight: 700;
     }
 
+    &-fraction {
+        display: none;
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
@@ -59,6 +63,46 @@
             font-size: 22px;
         }
 
+        &-fraction {
+            position: absolute;
+            z-index: 10;
+            top: 270px;
+            left: 0;
+            right: 0;
+            display: block;
+
+            &-row {
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+            }
+        }
+
+        .it-fraction__num {
+            width: 18px;
+            font-size: 12px;
+            color: $white;
+            font-weight: 700;
+            letter-spacing: .5px;
+
+            &.sp-total {
+                position: relative;
+                padding-left: 25px;
+                color: rgba($white, .5);
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    display: block;
+                    top: 50%;
+                    left: 5px;
+                    width: 10px;
+                    height: 1px;
+                    background-color: $white;
+                }
+            }
+        }
+
         .swiper-button-next,
         .swiper-button-prev {
             display: block;
@@ -94,7 +138,29 @@
     .intro-slider {
         &__title {
             left: 0;
-            padding-left: 40px;
+            padding-left: 110px;
+        }
+
+        &-fraction {
+            &-row {
+                max-width: 1320px;
+                margin: 0 auto;
+                padding-left: 25px;
+            }
+        }
+        .it-fraction__num {
+            &.sp-total {
+                padding-left: 35px;
+                &:before {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    .intro-slide {
+        &-inner {
+            padding-left: 70px;
         }
     }
 }
