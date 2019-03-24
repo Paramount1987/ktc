@@ -4,6 +4,10 @@ const config = {
     init: false,
     slidesPerView: 3,
     spaceBetween: 30,
+    autoplay: {
+        delay: 8000,
+        disableOnInteraction: false
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

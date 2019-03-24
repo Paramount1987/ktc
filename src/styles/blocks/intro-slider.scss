@@ -24,6 +24,36 @@
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
+        background-image: none;
+        width: 21px;
+        height: 21px;
+        margin-top: -10px;
+        color: $white;
+        overflow: hidden;
+        transition: width .25s;
+
+        &:hover {
+            width: 50px;
+        }
+        svg {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    .swiper-button-prev {
+        right: 290px;
+        left: auto;
+        transform: rotate(-180deg);
+        svg {
+            right: 0;
+        }
+    }
+    .swiper-button-next {
+        right: auto;
+        left: 290px;
+        svg {
+            right: 0;
+        }
     }
 }
 
@@ -51,9 +81,27 @@
     }
 }
 
+.intro-slider-controls {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    height: 2px;
+    bottom: 40px;
+
+    .swiper-pagination {
+        left: 0;
+        right: 0;
+    }
+    .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+}
+
 @include media-breakpoint-up(sm) {
     .intro-slider {
         height: 768px;
+        overflow: visible;
         &__title {
             max-width: 1280px;
             margin: 0 auto;
@@ -132,6 +180,47 @@
             }
         }
     }
+    .intro-slider-controls {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        left: auto;
+        width: 355px;
+        bottom: -10px;
+        background-color: $blue;
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent $blue transparent;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 20px;
+            bottom: 0;
+            left: -20px;
+            width: 20px;
+            background-color: $blue;
+        }
+    
+        .swiper-pagination {
+            position: relative;
+            top: 10px;
+            width: 100%;
+        }
+        .swiper-pagination-bullet {
+ 
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -162,5 +251,8 @@
         &-inner {
             padding-left: 70px;
         }
+    }
+    .intro-slider-controls {
+        width: 400px;
     }
 }

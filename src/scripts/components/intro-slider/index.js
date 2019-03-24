@@ -1,13 +1,22 @@
+import { svgBullet } from './data';
+
 const config = {
     init: false,
     loop: true,
     effect: 'fade',
+    autoplay: {
+        delay: 8000,
+        disableOnInteraction: false
+    },
     fadeEffect: {
         crossFade: true
       },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        renderBullet: (index, className) => {
+            return `<span class=${className}>${svgBullet}</span>`;
+        }
     },
     navigation: {
         nextEl: '.swiper-button-next',

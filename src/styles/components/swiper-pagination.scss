@@ -21,7 +21,20 @@
             opacity: 1;
         }
         .svg__circle-anim {
-            animation: circleDraw 8s linear;
+            animation: circleDraw 8.2s linear forwards;
+        }
+    }
+}
+
+.swiper-pagination {
+    &--white {
+
+        .swiper-pagination-bullet {
+            color: $white;
+            background-color: $white;
+            &-active {
+                background-color: transparent;
+            }
         }
     }
 }
