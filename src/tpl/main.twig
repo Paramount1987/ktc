@@ -1,3 +1,5 @@
+{% set headerAbs = 'true' %}
+
 {% extends 'tpl/inc/page.twig' %}
 
 {% block content %}
@@ -6,7 +8,8 @@
 
     {% include "tpl/inc/blocks/intro-slider.twig" %}
 
-    <div class="container py-5">
+    <div class="container pb-5">
+        <h2 class="title-bg">Каталог</h2>
         {% include "tpl/inc/components/catalog.twig" %}
     </div>
 
@@ -16,7 +19,10 @@
         </div>
     </div>
 
-    <div class="pt-5">
+    <div class="pt-3 pt-sm-5 pt-md-8">
+        <div class="container">
+            <h2 class="h2">Новости</h2>
+        </div>
         {% include "tpl/inc/components/news-slider.twig" %}
     </div>
 </div>

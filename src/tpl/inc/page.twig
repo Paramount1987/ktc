@@ -6,12 +6,33 @@
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ title }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css?{{ date().getTime() }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?{{ date().getTime() }}">
+    <style>
+            #preloader {
+              position: fixed;
+              z-index: 9999;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #282b30;
+            }
+    </style>
+    <noscript>
+        <style>
+            .preloader {
+                display: none;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
+<div id="preloader"></div>
 
 {% set title = "KTC" %}
+
+{% include "tpl/inc/header.twig" %}
 
 <div class="wrapper">
     {% block content %}{% endblock %}

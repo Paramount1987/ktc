@@ -1,0 +1,55 @@
+<header class="header {% if headerAbs %} header--abs {% endif %}">
+  <div class="header-inner">
+    <div class="container">
+      <div class="header-row">
+        <div class="header-col">
+          <a class="link-logo" href="#">
+            <img alt="" class="link-logo__img" src="images/content/logo.png"></a>
+          </div>
+          <div class="header-col header-col--scnd">
+            <div class="phones">
+              <div class="phones-ico"></div>
+              <p>
+                <a class="phones__link" href="tel:8 800 250-83-03">8 800 250-83-03</a>
+              </p>
+              <p>
+                <a class="phones__link-tx op7" href="#">Заказать звонок</a>
+              </p>
+            </div>
+          </div>
+          <div class="header-col header-col--last">
+            <div class="header-nav js-header-nav">
+              {% include "tpl/inc/nav.twig" %}
+              <ul class="list-social">
+                <li>
+                  <a class="link-social link-social--fb" href="#">
+                    {% include "tpl/inc/svg/fb.svg" %}
+                  </a>
+                </li>
+                <li>
+                  <a class="link-social link-social--vk" href="#">
+                    {% include "tpl/inc/svg/vk.svg" %}
+                  </a>
+                </li>
+                <li>
+                  <a class="link-social link-social--in" href="#">
+                    {% include "tpl/inc/svg/instagram.svg" %}
+                  </a>
+                </li>
+                <li>
+                  <a class="link-social link-social--tw" href="#">
+                    {% include "tpl/inc/svg/twitter.svg" %}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button class="nav-btn js-nav-btn">
+                <div class="nav-btn__line"></div>
+                <div class="nav-btn__line"></div>
+                <div class="nav-btn__line"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

@@ -12,10 +12,14 @@ require('./utils/index');
 
 // components
 //----------------------------------------------
+import App from './components/app';
+import Nav from './components/nav';
 import News from './components/news';
 import IntroSlider from './components/intro-slider';
 
 $(document).ready(() => {
-    IntroSlider.init();
+    App.init();
     News.init();
+    Nav.init();
+    IntroSlider.init();
 });

@@ -1,3 +1,5 @@
+@import "header";
+@import "nav";
 @import "footer";
 @import "socials";
 @import "phones";
@@ -7,4 +9,18 @@
 
 .wrapper{
     overflow: hidden;
+}
+
+body {
+    &.is-nav-open {
+        overflow: hidden;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    body {
+        &.is-nav-open {
+            overflow: auto;
+        }
+    }
 }
