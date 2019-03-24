@@ -33,7 +33,7 @@ const Intro = {
             });
             swiper.on('slideChange', function () {
                 self.slideChange(this);
-              });
+            });
             // init Swiper
             swiper.init();
         });

@@ -1,0 +1,33 @@
+.swiper-pagination-bullet {
+    color: $blue;
+
+    &:only-child {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .svg {
+        position: relative;
+        left: -6px;
+        top: -6px;
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    &-active {
+        background-color: transparent;
+        opacity: 1;
+
+        .svg {
+            opacity: 1;
+        }
+        .svg__circle-anim {
+            animation: circleDraw 8s linear;
+        }
+    }
+}
+
+@keyframes circleDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

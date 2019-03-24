@@ -1,7 +1,11 @@
 .news-slider {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 0 80px 20px;
+    padding: 0 0 90px 20px;
+
+    .swiper-pagination {
+        bottom: 30px;
+    }
 }
 
 .news-card {
@@ -68,7 +72,7 @@
 
 @include media-breakpoint-up(sm) {
     .news-slider {
-        padding: 0 20px 80px 20px;
+        padding: 0 20px 90px 20px;
     }
 
     .news-card {
