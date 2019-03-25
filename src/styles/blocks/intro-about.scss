@@ -29,6 +29,9 @@
     }
     &__map {
         display: none;
+        &-bg {
+            display: none;
+        }
     }
 }
 
@@ -71,6 +74,7 @@
             padding: 0 85px;
         }
         &-bottom {
+            position: relative;
             margin-top: -250px;
         }
         &-list {
@@ -99,10 +103,70 @@
             position: relative;
             left: -50px;
             width: 900px;
+            &-bg {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 900px;
+                height: 509px;
+            }
         }
 
         .ctx-card-list {
             margin-top: -50px;
+        }
+        .ia__map-logo {
+            position: absolute;
+            top: 45%;
+            left: 10%;
+            z-index: 1;
+            img {
+                width: 64px;
+            }
+        }
+        .ia__map-p {
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            z-index: 1;
+            background-color: #016990;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            &:nth-child(1){
+                top: 40%;
+                left: 70%;
+            }
+            &:nth-child(2){
+                top: 77%;
+                left: 70%;
+            }
+            &:nth-child(3){
+                top: 50%;
+                left: 44.2%;
+            }
+            &:nth-child(4){
+                top: 57%;
+                left: 22%;
+            }
+            &:nth-child(5){
+                top: 85%;
+                left: 44.2%;
+            }
+            &:nth-child(6){
+                top: 74%;
+                left: 34.2%;
+            }
+            &:nth-child(7){
+                top: 70.5%;
+                left: 17.3%;
+            }
+            &:nth-child(8){
+                top: 53%;
+                left: 7.3%;
+            }
         }
     }
 }
