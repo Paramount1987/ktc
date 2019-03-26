@@ -33,6 +33,9 @@
             display: none;
         }
     }
+    .ia__map-logo {
+        display: none;
+    }
 }
 
 .ia-card {
@@ -118,6 +121,7 @@
             margin-top: -50px;
         }
         .ia__map-logo {
+            display: block;
             position: absolute;
             top: 45%;
             left: 10%;
