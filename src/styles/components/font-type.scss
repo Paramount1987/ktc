@@ -25,12 +25,15 @@ h1,
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.2;
 }
 h2,
 .h2 {
   margin-bottom: 15px;
   font-size: 24px;
+}
+.h2--ut {
+  font-weight: 700;
 }
 h3,
 .h3 {
@@ -96,6 +99,11 @@ h6,
 @include media-breakpoint-up(lg) {
   h1,
   .h1 {
+    padding-left: 110px;
+  }
+  .h2--ut {
+    margin-bottom: 35px;
+    font-size: 46px;
     padding-left: 110px;
   }
   .h3 {
