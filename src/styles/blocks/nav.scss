@@ -153,6 +153,14 @@
           width: 100%;
         }
       }
+      &.is-active {
+        .header--bg-gray & {
+          color: $blue;
+          &:after {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 

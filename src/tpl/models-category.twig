@@ -1,0 +1,38 @@
+{% set headerClass = 'header--bg-gray header-static' %}
+
+{% extends 'tpl/inc/page.twig' %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="bg-white py-1 pt-sm-2">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a class="breadcrumb-item" href="#">Главная</a>
+                    <a class="breadcrumb-item" href="#">Модельный ряд</a>
+                    <span class="breadcrumb-item">Вахтовые автобусы</span>
+                </div>
+
+                <div class="mc-title-row">
+                    <h1 class="h1 mb-0">Вахтовые автобусы</h1>
+                    <div class="mc-title-sub">
+                        <div class="mc-title-sub__num">37</div>
+                        <div class="mc-title-sub__text">моделей</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="py-5 py-lg-9">
+                {% include "tpl/inc/pages/model-category/catalog.twig" %}
+
+                {% include "tpl/inc/components/pagination.twig" %}
+            </div>
+        </div>
+
+        {% include "tpl/inc/blocks/feedback.twig" %}
+    </div>
+
+{% endblock %}

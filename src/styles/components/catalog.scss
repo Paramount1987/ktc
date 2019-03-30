@@ -35,6 +35,16 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1.7px;
+
+        &--lwrcase {
+            text-transform: none;
+            line-height: 1.7;
+        }
+    }
+    &__descr {
+        display: block;
+        text-align: center;
+        color: $gray-d1;
     }
 }
 
@@ -57,6 +67,9 @@
         }
         &__title {
             padding: 0 5px;
+            &--lwrcase {
+               padding: 0;
+            }
         }
     }
 }
@@ -73,6 +86,9 @@
         &__title {
             padding: 0 15px;
             font-size: 14px;
+            &--lwrcase {
+                padding: 0;
+            }
         }
     }
 }
