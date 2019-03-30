@@ -1,0 +1,26 @@
+{% set headerClass = 'header--bg-gray header-static' %}
+
+{% extends 'tpl/inc/page.twig' %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="bg-white py-1 pt-sm-2">
+            <div class="container">
+                {% include "tpl/inc/components/breadcrumbs.twig" %}
+
+                <h1 class="h1">Услуги</h>
+            </div>
+        </div>
+
+        <div class="container pt-3">
+            <h3 class="h3 h3--lg-pl">Производство и сервис</h3>
+                
+            {% include "tpl/inc/pages/service/list-service.twig" %}
+
+            <h3 class="h3 h3--lg-pl">Покупка и доставка</h3>
+            {% include "tpl/inc/pages/service/list-service2.twig" %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -17,8 +17,10 @@
     background-color: $white;
     color: $dark;
     text-decoration: none;
+    transition: box-shadow .15s;
 
     &:hover {
+        box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.09);
         .news-card__arrow {
             opacity: 1;
             transform: translateX(10px);

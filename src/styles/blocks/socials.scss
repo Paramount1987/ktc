@@ -4,37 +4,37 @@ $color-in: #e4405f;
 $color-tw: #55acee;
 
 .list-social {
-    display: flex;
-    padding: 0;
-    margin: 0 auto;
-    list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
 
-    > li {
-        margin: 0 9px;
-    }
+  > li {
+    margin: 0 9px;
+  }
 }
 
 .link-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: rgba(#eaedf3, .2);
-    color: $white;
-    transition: background-color .15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(#eaedf3, 0.2);
+  color: $white;
+  transition: background-color 0.15s;
 
-    &--fb:hover {
-        background-color: $color-fb;
-    }
-    &--vk:hover {
-        background-color: $color-vk;
-    }
-    &--in:hover {
-        background-color: $color-in;
-    }
-    &--tw:hover {
-        background-color: $color-tw;
-    }
+  &--fb:hover {
+    background-color: $color-fb;
+  }
+  &--vk:hover {
+    background-color: $color-vk;
+  }
+  &--in:hover {
+    background-color: $color-in;
+  }
+  &--tw:hover {
+    background-color: $color-tw;
+  }
 }

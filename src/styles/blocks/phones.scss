@@ -1,54 +1,58 @@
 .phones {
-    position: relative;
-    padding-left: 35px;
+  position: relative;
+  padding-left: 35px;
 
+  &-ico {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('images/svg/loading-arrow-phone.svg'), url('images/svg/phone.svg');
+    background-position: center, center;
+    background-size: 24px 24px, 13px 13px;
+    background-repeat: no-repeat, no-repeat;
+
+    body:not(.is-nav-open) .header--bg-gray & {
+      background-image: url('images/svg/loading-arrow-phone--d.svg'), url('images/svg/phone--d.svg');
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__link-tx {
+    font-size: 10px;
+    color: $white;
+    border-bottom: 1px dotted $white;
+    text-decoration: none;
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 50px;
     &-ico {
-        position: absolute;
-        z-index: 1;
-        top: 2px;
-        left: 0;
-        width: 24px;
-        height: 24px;
-        background-image: url('images/svg/loading-arrow-phone.svg'), url('images/svg/phone.svg');
-        background-position: center, center;
-        background-size: 24px 24px, 13px 13px;
-        background-repeat: no-repeat, no-repeat;
+      width: 33px;
+      height: 33px;
+      background-size: 33px 33px, 18px 18px;
     }
-
     &__link {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+      font-size: 18px;
+      line-height: 1.8;
     }
-    &__link-tx {
-        font-size: 10px;
-        color: $white;
-        border-bottom: 1px dotted $white;
-        text-decoration: none;
-        &:hover {
-            border-color: transparent;
-        }
-    }
-
-    p {
-        margin: 0;
-    }
-
-    @include media-breakpoint-up(sm) {
-        padding-left: 50px;
-        &-ico {
-            width: 33px;
-            height: 33px;
-            background-size: 33px 33px, 18px 18px;
-        }
-        &__link {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-    }
+  }
 }
