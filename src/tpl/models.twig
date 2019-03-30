@@ -1,0 +1,27 @@
+{% set headerClass = 'header--bg-gray header-static' %}
+{% set bredcreambItem = 'Модельный ряд' %}
+
+{% extends 'tpl/inc/page.twig' %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="bg-white py-1 pt-sm-2">
+            <div class="container">
+                {% include "tpl/inc/components/breadcrumbs.twig" %}
+
+                <h1 class="h1">Модельный ряд</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="title-bg">Каталог</h2>
+            <div class="pb-5">
+                {% include "tpl/inc/components/catalog.twig" %}
+            </div>
+        </div>
+
+        {% include "tpl/inc/blocks/feedback.twig" %}
+    </div>
+
+{% endblock %}
