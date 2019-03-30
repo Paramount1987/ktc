@@ -1,0 +1,25 @@
+{% set headerClass = 'header--bg-gray header-static' %}
+{% set bredcreambItem = 'Новости' %}
+
+{% extends 'tpl/inc/page.twig' %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="bg-white py-1 pt-sm-2">
+            <div class="container">
+                {% include "tpl/inc/components/breadcrumbs.twig" %}
+
+                <h1 class="h1">Новости</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="pb-5 pt-3 pb-sm-9">
+                {% include "tpl/inc/pages/news/catalog.twig" %}
+                {% include "tpl/inc/components/pagination.twig" %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
