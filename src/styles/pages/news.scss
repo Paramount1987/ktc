@@ -11,7 +11,7 @@
     margin-bottom: 20px;
   }
   .link-back {
-    margin-left: 90px;
+    margin-left: 75px;
   }
 
   h3 {
@@ -60,6 +60,29 @@
   }
   img {
     max-width: 100%;
+  }
+  ol {
+    margin: 0 0 40px 0;
+    padding: 0 0 0 10px;
+    list-style-position: outside;
+  
+    > li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+  }
+  .ul-disc {
+    margin: 0 0 40px 0;
+    padding: 0 0 0 10px;
+    list-style: disc;
+  
+    > li {
+       margin-bottom: 10px;
+       padding-left: 10px;
+       &::before {
+         display: none;
+       }
+     }
   }
 }
 
