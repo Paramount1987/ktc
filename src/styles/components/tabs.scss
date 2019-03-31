@@ -1,8 +1,64 @@
+.nav-tabs {
+  display: flex;
+  margin: 0 0 0 -10px;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    position: relative;
+    margin-left: 10px;
+    padding-bottom: 7px;
+  }
+
+  &__link {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba($dark, .5);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+    }
+
+    &.active {
+      color: $dark;
+
+      &:after {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
 .tab-content {
   > .tab-pane {
     display: none;
   }
   > .active {
     display: block;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .nav-tabs {
+    margin: 0 0 0 -45px;
+  
+    > li {
+      margin-left: 45px;
+      padding-bottom: 12px;
+    }
+  
+    &__link {
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
   }
 }

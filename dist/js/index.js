@@ -10647,9 +10647,19 @@ exports.default = void 0;
 var App = {
   init: function init() {
     this.hidePreloader();
+    this.toggleMap();
   },
   hidePreloader: function hidePreloader() {
     $('#preloader').fadeOut(300);
+  },
+  toggleMap: function toggleMap() {
+    $('.js-map-link').click(function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var target = $this.attr('href');
+      $this.toggleClass('is-opened');
+      $(target).slideToggle();
+    });
   }
 };
 var _default = App;
@@ -19514,7 +19524,7 @@ var Tab = function ($) {
   };
   var Selector = {
     DROPDOWN: '.dropdown',
-    NAV_LIST_GROUP: '.nav, .list-group',
+    NAV_LIST_GROUP: '.nav-tabs, .list-group',
     ACTIVE: '.active',
     ACTIVE_UL: '> li > .active',
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',

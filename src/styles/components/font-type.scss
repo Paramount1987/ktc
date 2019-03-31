@@ -65,6 +65,10 @@ h6,
   text-align: center;
 }
 
+b {
+  font-weight: 600;
+}
+
 @include media-breakpoint-up(sm) {
   h1,
   .h1 {
