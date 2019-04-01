@@ -1,0 +1,33 @@
+{% set headerClass = 'header-static' %}
+{% set bredcreambItem = 'Страница не найдена' %}
+{% set bodyClass = 'bg-dark' %}
+
+{% extends 'tpl/inc/page.twig' %}
+
+{% block content %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+
+    <div class="content">
+        <div class="canvas-404"></div>
+        <div class="py-1 pt-sm-2">
+            <div class="container">
+                {% include "tpl/inc/components/breadcrumbs.twig" %}
+
+                <h1 class="h1 mb-sm-7">Ошибка 404</h1>
+            </div>
+        </div>
+
+        <div class="container p404-container">
+            <div class="p404-txt">404</div>
+            <p class="p404__descr">
+                Неправильно набран адрес или такой страницы на сайте больше не существует.
+            </p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-white">На главную</a>
+                <a href="#" class="btn btn-blue ml-2">В каталог</a>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

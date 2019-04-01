@@ -20,6 +20,10 @@
     &:hover {
       color: $blue;
     }
+
+    .bg-dark & {
+      color: $white;
+    }
   }
 }
 

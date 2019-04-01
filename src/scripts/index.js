@@ -12,6 +12,8 @@ require('./utils/index');
 
 // components
 //----------------------------------------------
+require('./components/404/index');
+
 import App from './components/app';
 import Nav from './components/nav';
 import News from './components/news';

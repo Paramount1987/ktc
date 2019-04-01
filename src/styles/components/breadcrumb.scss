@@ -19,6 +19,10 @@
       margin-right: 10px;
     }
   }
+
+  .bg-dark & {
+    color: $gray-d1;
+  }
 }
 
 a.breadcrumb-item {
