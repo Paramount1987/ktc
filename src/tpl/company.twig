@@ -1,0 +1,49 @@
+{% set headerClass = 'header--bg-gray header-static' %}
+{% set bredcreambItem = 'Компания' %}
+
+{% extends 'tpl/inc/page.twig' %}
+
+{% block content %}
+
+    <div class="content content-company">
+        <div class="bg-white py-1 pt-sm-2">
+            <div class="container">
+                {% include "tpl/inc/components/breadcrumbs.twig" %}
+
+                <h1 class="h1 mb-md-6">Компания</h1>
+            </div>
+        </div>
+
+        <div class="bg-white">
+            <div class="container">
+                <div class="content-company-inner">
+                    <div class="cmp-intro">
+                        <div class="cmp-intro-txt-lg">
+                            Завод «КТС» современное, динамично развивающееся предприятие, мы производим и поставляем более 60 видов спецтехники по всей России.
+                        </div>
+                        <div class="ia-card">
+                            <div class="ia-card-top">
+                                <div class="ia-card__num">
+                                    &gt;4000<span class="sm">м<sup>2</sup>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="ia-card-body">
+                                <div class="ia-card__text">
+                                    материально-техническая база производства
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cmp-intro-txt-sm">
+                            Поставка осуществляется как по прямым, так и по тендерным процедурам для нужд предприятий военно-промышленного и нефтегазового комплексов, геофизических, геологоразведочных работ и буровзрывных работ, для строительства и ремонта магистральных нефте-, газо- продуктопроводов.
+                        </div>
+                    </div>
+
+                    <h4 class="h4">Структура предприятия</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
