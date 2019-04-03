@@ -90,11 +90,12 @@
     list-style: none;
 
     > li {
+      width: 85px;
       margin: 0 0 10px 12px;
     }
   }
   &__pic {
-    width: 85px;
+    max-width: 100%;
   }
 }
 
@@ -174,11 +175,9 @@
       margin: 0 0 0 -15px;
   
       > li {
+        width: 133px;
         margin: 0 0 30px 15px;
       }
-    }
-    &__pic {
-      width: 133px;
     }
   }
 }
@@ -241,11 +240,9 @@
       margin: 0 0 0 -20px;
   
       > li {
+        width: 170px;
         margin: 0 0 30px 20px;
       }
-    }
-    &__pic {
-      width: 170px;
     }
   }
 }
@@ -289,14 +286,12 @@
   }
   .cmp-clients {
     &-list {
-      margin: 0 0 0 -30px;
+      margin: 0 0 0 -28px;
   
       > li {
-        margin: 0 0 30px 30px;
+        width: 233px;
+        margin: 0 0 30px 28px;
       }
-    }
-    &__pic {
-      width: 230px;
     }
   }
 }
