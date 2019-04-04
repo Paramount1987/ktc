@@ -47,3 +47,14 @@
     }
   }
 }
+
+@include media-breakpoint-up(md) {
+  .pb-md-28 {
+    padding-bottom: 280px !important;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .pb-md-32 {
+    padding-bottom: 320px !important;
+  }
+}

@@ -53,6 +53,10 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        &--lg {
+            height: 192px;
+        }
     }
     &__title {
         margin-bottom: 15px;
@@ -109,6 +113,9 @@
         }
         &__img {
             height: 250px;
+            &--lg {
+                height: 460px;
+            }
         }
         &__title {
             margin-bottom: 35px;
@@ -141,6 +148,11 @@
         &-bottom {
             padding: 0 50px;
         }
+        &__img {
+            &--lg {
+                height: 575px;
+            }
+        }
         &__title {
             font-size: 22px;
         }
@@ -156,6 +168,14 @@
         .news-card {
             width: 31%;
             margin-left: 2.33333%;
+        }
+    }
+
+    .news-card {
+        &__img {
+            &--lg {
+                height: 640px;
+            }
         }
     }
 }

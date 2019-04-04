@@ -36,11 +36,24 @@ const News = {
     },
 
     initSlider() {
-        const self = this;
+
         /* global Swiper */
         $('.js-news-slider').each(function init() {
             const $this = $(this);
-            const swiper = new Swiper($this, config);
+            const perView = $this.data('perview');
+            let options = {}; 
+
+            if (perView == 1) {
+                options = {
+                    ...config,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    breakpoints: {},
+                } 
+            } else {
+                options = config;
+            }
+            const swiper = new Swiper($this, options);
 
             swiper.on('init', function() {
             });
