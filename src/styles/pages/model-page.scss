@@ -1,0 +1,127 @@
+.mlp-intro {
+  padding-bottom: 30px;
+  &__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  &__pic {
+    display: block;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+    font-size: 10px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-body {
+    &__title {
+      margin-bottom: 10px;
+      color: $blue-d1;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1.4px;
+      font-weight: 700;
+    }
+  }
+
+  .btn {
+    font-size: 13px;
+    text-transform: none;
+    font-weight: 500;
+    box-shadow: none;
+    letter-spacing: 0;
+
+    &-group {
+      width: 230px;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .mlp-intro {
+    max-width: 630px;
+    padding-left: 75px;
+    padding-bottom: 70px;
+
+    &__title {
+      margin-bottom: 55px;
+      font-size: 32px;
+      text-align: left;
+    }
+    &__descr {
+      margin-bottom: 30px;
+      font-size: 13px;
+    }
+
+    &-body {
+      &__title {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+    }
+
+    .btn {
+      width: 230px;
+      margin-left: 20px;
+  
+      &-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .mlp-intro {
+    position: relative;
+    max-width: 1280px;
+    min-height: 470px;
+    padding: 0 61% 50px 0;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__pic {
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      left: 42%;
+      max-width: 630px;
+    }
+
+    .btn {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mlp-intro {
+    padding: 30px 60% 70px 0;
+
+    &__title {
+      margin-bottom: 30px;
+      padding-left: 0;
+      font-size: 36px;
+    }
+
+    &__pic {
+      top: 20px;
+      left: 50%;
+      max-width: 645px;
+    }
+  }
+}

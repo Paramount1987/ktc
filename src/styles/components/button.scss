@@ -116,7 +116,21 @@ input[type="button"] {
   &:hover {
     background-color: $blue-d1;
   }
+
+  &-outline {
+    background-color: transparent;
+    border: 1px solid $blue;
+    color: $blue;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
 }
+
+
 
 @include media-breakpoint-up(sm) {
   .btn {
