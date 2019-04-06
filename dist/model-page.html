@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KTC</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?1554548131059">
+    <link rel="stylesheet" href="css/style.css?1554583989168">
     <style>
             #preloader {
               position: fixed;
@@ -164,12 +164,92 @@
                 <div class="mlp-model">
                     <div class="mlp-pic-container">
                         <img src="images/temp/bitmap-copy.png" class="mlp-pic__img" alt="">
-                        <div class="mlp-pic__point" style="top: 55%; left: 14%;">+</div>
-                        <div class="mlp-pic__point" style="top: 0; left: 35%;">+</div>
-                        <div class="mlp-pic__point" style="top: 32%; left: 0;">+</div>
-                        <div class="mlp-pic__point" style="top: 14%; left: 80%;">+</div>
+                        <div class="mlp-pic__point js-mlp-point" style="top: 55%; left: 14%;" data-ref="1">+</div>
+                        <div class="mlp-pic__point js-mlp-point" style="top: 0; left: 35%;" data-ref="2">+</div>
+                        <div class="mlp-pic__point js-mlp-point" style="top: 32%; left: 0;" data-ref="3">+</div>
+                        <div class="mlp-pic__point js-mlp-point" style="top: 14%; left: 80%;" data-ref="4">+</div>
                     </div>
-                    <div class="mlp-model-descr"></div>
+                    <div class="mlp-model-descr js-mlp-descr">
+    <button class="mlp-model-descr__btn-close js-mlp-btn-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <path fill="#282B30" fill-rule="nonzero" d="M33.87 12.657L24 22.527l-9.87-9.87-1.473 1.473 9.87 9.87-9.87 9.87 1.473 1.473 9.87-9.87 9.87 9.87 1.473-1.473-9.87-9.87 9.87-9.87z"/>
+</svg>
+    </button>
+    <div class="mlp-model-descr-inner">
+        <div class="mlp-model-descr__title js-mlp-title"></div>
+        <div class="mlp-model-descr__txt nano">
+            <div class="nano-content js-mlp-content">
+            </div>
+        </div>
+    </div>
+    <div class="mlp-model-descr-cntrls">
+        <button class="mlp-model__btn-left js-mlp-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="19" viewBox="0 0 53 19">
+    <path fill="currentColor" fill-rule="nonzero" stroke="currentColor" stroke-width=".2" d="M50.705 10.048l.17-.17.071.17h-.241zm0 0H1.447a.548.548 0 0 1 0-1.095h49.258l-7.119-7.119a.548.548 0 0 1 .775-.773l8.051 8.051a.551.551 0 0 1 0 .776l-8.05 8.052a.548.548 0 0 1-.775-.774l7.118-7.118z"/>
+</svg>
+        </button>
+        <button class="mlp-model__btn-right js-mlp-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="19" viewBox="0 0 53 19">
+    <path fill="currentColor" fill-rule="nonzero" stroke="currentColor" stroke-width=".2" d="M50.705 10.048l.17-.17.071.17h-.241zm0 0H1.447a.548.548 0 0 1 0-1.095h49.258l-7.119-7.119a.548.548 0 0 1 .775-.773l8.051 8.051a.551.551 0 0 1 0 .776l-8.05 8.052a.548.548 0 0 1-.775-.774l7.118-7.118z"/>
+</svg>
+        </button>
+    </div>
+</div>
+                </div>
+                <div class="d-none">
+                    <div id="mlp-content-1">
+                        <div class="mlp-model-descr__title">Кузов</div>
+                        <div class="mlp-content">
+                            <p>Кузов изготовлен по бескаркасной технологии с глухими скосами или без, по периметру обвязан алюминиевым уголком.</p>
+                            <p>Наружная обшивка - плакированный металл или пластик.</p>
+                            <p>
+                                Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                Утеплитель - экструдированный пенополистирол. Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                Утеплитель - экструдированный пенополистирол.
+                            </p>
+                            <p>Кузов изготовлен по бескаркасной технологии с глухими скосами или без, по периметру обвязан алюминиевым уголком.</p>
+                            <p>Наружная обшивка - плакированный металл или пластик.</p>
+                            <p>
+                                Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                Утеплитель - экструдированный пенополистирол. Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                Утеплитель - экструдированный пенополистирол.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="mlp-content-2">
+                            <div class="mlp-model-descr__title">Кузов 2</div>
+                            <div class="mlp-content">
+                                <p>
+                                    Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                    Утеплитель - экструдированный пенополистирол. Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                    Утеплитель - экструдированный пенополистирол.
+                                </p>
+                                <p>Кузов изготовлен по бескаркасной технологии с глухими скосами или без, по периметру обвязан алюминиевым уголком.</p>
+                                <p>Наружная обшивка - плакированный металл или пластик.</p>
+                                <p>
+                                    Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                    Утеплитель - экструдированный пенополистирол. Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                    Утеплитель - экструдированный пенополистирол.
+                                </p>
+                            </div>
+                    </div>
+                    <div id="mlp-content-3">
+                            <div class="mlp-model-descr__title">Кузов 3</div>
+                            <div class="mlp-content">
+                                <p>
+                                    Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                    Утеплитель - экструдированный пенополистирол. Внутренняя обшивка - пластик светлых тонов, потолок белого цвеат.
+                                    Утеплитель - экструдированный пенополистирол.
+                                </p>
+                            </div>
+                    </div>
+                    <div id="mlp-content-4">
+                            <div class="mlp-model-descr__title">Кузов 4</div>
+                            <div class="mlp-content">
+                                <p>Кузов изготовлен по бескаркасной технологии с глухими скосами или без, по периметру обвязан алюминиевым уголком.</p>
+                                <p>Наружная обшивка - плакированный металл или пластик.</p>
+                            </div>
+                    </div>
                 </div>
             </div>
             <div class="tab-pane fade py-3 py-sm-6 pt-md-9" id="tab2" role="tabpanel">
@@ -192,13 +272,16 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="53" height="19" viewBox="0 0 53 19">
     <path fill="currentColor" fill-rule="nonzero" stroke="currentColor" stroke-width=".2" d="M50.705 10.048l.17-.17.071.17h-.241zm0 0H1.447a.548.548 0 0 1 0-1.095h49.258l-7.119-7.119a.548.548 0 0 1 .775-.773l8.051 8.051a.551.551 0 0 1 0 .776l-8.05 8.052a.548.548 0 0 1-.775-.774l7.118-7.118z"/>
 </svg>
+
         </div>
         <div class="swiper-button-prev">
            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="19" viewBox="0 0 53 19">
     <path fill="currentColor" fill-rule="nonzero" stroke="currentColor" stroke-width=".2" d="M50.705 10.048l.17-.17.071.17h-.241zm0 0H1.447a.548.548 0 0 1 0-1.095h49.258l-7.119-7.119a.548.548 0 0 1 .775-.773l8.051 8.051a.551.551 0 0 1 0 .776l-8.05 8.052a.548.548 0 0 1-.775-.774l7.118-7.118z"/>
 </svg>
+
         </div>
-  </div>            </div>
+  </div>
+            </div>
         </div>
 
     </div>
@@ -474,7 +557,7 @@
     </div>
 </footer>
 
-<script src="js/index.js?1554548131062"></script>
+<script src="js/index.js?1554583989171"></script>
 <script>
         var map;
         var myLatLng = {lat: 55.75694, lng: 37.6094};
