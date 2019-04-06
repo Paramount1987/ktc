@@ -2,6 +2,7 @@ const App = {
   init() {
     this.hidePreloader();
     this.toggleMap();
+    this.toggleTab();
   },
 
   hidePreloader() {
@@ -17,6 +18,20 @@ const App = {
       $this.toggleClass('is-opened');
       $(target).slideToggle();
     })
+  },
+
+  toggleTab() {
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      const $target = $(e.target);
+      const href = $target.attr('href');
+
+      const $tab = $(href);
+      const $gallery = $tab.find('.js-gallery-slider');
+
+      if ($gallery.length) {
+        $gallery.trigger('shown.bs.tab');
+      }
+    });
   }
 };
 

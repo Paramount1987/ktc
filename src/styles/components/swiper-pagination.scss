@@ -24,6 +24,14 @@
             animation: circleDraw 8.2s linear forwards;
         }
     }
+
+    .no-anim & {
+        &-active {
+            .svg__circle-anim {
+                animation: circleDraw 0s linear forwards;
+            }
+        }
+    }
 }
 
 .swiper-pagination {

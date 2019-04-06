@@ -4,10 +4,18 @@
   padding: 0;
   list-style: none;
 
-  > li {
+  &--lg {
+    margin-left: -25px;
+  }
+
+  &-item {
     position: relative;
     margin-left: 10px;
     padding-bottom: 7px;
+
+    &--lg {
+      margin-left: 25px;
+    }
   }
 
   &__link {
@@ -34,6 +42,10 @@
       &:after {
         background-color: $blue;
       }
+    }
+
+    &--lg {
+      font-size: 12px;
     }
   }
 }

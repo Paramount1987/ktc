@@ -16,6 +16,10 @@ const config = {
             return `<span class=${className}>${svgBullet}</span>`;
         }
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     breakpoints: {
         // when window width is <= 480px
         767: {
