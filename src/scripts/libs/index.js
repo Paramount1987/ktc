@@ -11,3 +11,5 @@ require('./bootstrap4/button');
 // require('./jquery.mask.min');
 require('./jquery.validate');
 require('./nanoscroller');
+require('./spincrement');
+require('./waypoints');

@@ -142,34 +142,45 @@
       &:nth-child(1) {
         top: 40%;
         left: 70%;
+        animation: opacityToggle 2s linear infinite;
       }
       &:nth-child(2) {
         top: 77%;
         left: 70%;
+        animation: opacityToggle 2s .8s linear infinite;
       }
       &:nth-child(3) {
         top: 50%;
         left: 44.2%;
+        animation: opacityToggle 2s 1.8s linear infinite;
       }
       &:nth-child(4) {
         top: 57%;
         left: 22%;
+        animation: opacityToggle 2s 1.2s linear infinite;
       }
       &:nth-child(5) {
         top: 85%;
         left: 44.2%;
+        animation: opacityToggle 2s 2.8s linear infinite;
       }
       &:nth-child(6) {
         top: 74%;
         left: 34.2%;
+        animation: opacityToggle 2s 1s linear infinite;
       }
       &:nth-child(7) {
         top: 70.5%;
         left: 17.3%;
+        animation: opacityToggle 2s 3s linear infinite;
       }
       &:nth-child(8) {
         top: 53%;
         left: 7.3%;
+        animation: opacityToggle 2s 3.8s linear infinite;
+      }
+      &:nth-child(9) {
+        animation: opacityToggle 2s 3.4s linear infinite;
       }
     }
   }
@@ -246,5 +257,17 @@
         padding: 0 100px 0 0;
       }
     }
+  }
+}
+
+@keyframes opacityToggle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

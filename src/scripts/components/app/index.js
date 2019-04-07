@@ -1,3 +1,5 @@
+// require('waypoints/lib/jquery.waypoints.min.js');
+
 const App = {
   init() {
     this.$body = $('body');
@@ -17,6 +19,9 @@ const App = {
     this.mlpPointClickHanlder();
     this.mlpBtnCloseClickHanlder();
     this.mlpArrowsClickHandler();
+    
+    this.spincrementScroll();
+    this.fadeInElement();
   },
 
   hidePreloader() {
@@ -118,6 +123,40 @@ const App = {
       }
 
       this.updateMlpContent(this.currentPoint);
+    });
+  },
+
+  spincrementScroll() {
+    $('.js-spincrement').each(function () {
+      new Waypoint({
+        element: this,
+        handler: function() {
+          const $el = $(this.element);
+
+          if (!$el.hasClass('done')) {
+            $el.spincrement({
+              duration: 1800,
+              complete: () => {
+                  $el.addClass('done')
+              }
+            });
+          }
+        },
+        offset: '75%'
+      })
+    });
+  },
+
+  fadeInElement() {
+    $('.js-fade-in').each(function () {
+      new Waypoint({
+        element: this,
+        handler: function() {
+          const $el = $(this.element);
+          $el.addClass('is-ready')
+        },
+        offset: '75%'
+      })
     });
   }
 };

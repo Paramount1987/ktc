@@ -4,10 +4,10 @@ const config = {
     init: false,
     slidesPerView: 3,
     spaceBetween: 30,
-    autoplay: {
-        delay: 8000,
-        disableOnInteraction: false
-    },
+    // autoplay: {
+    //     delay: 8000,
+    //     disableOnInteraction: false
+    // },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -45,17 +45,25 @@ const News = {
         $('.js-news-slider').each(function init() {
             const $this = $(this);
             const perView = $this.data('perview');
-            let options = {}; 
+            const autoplay = $this.data('autoplay');
+            let options = {...config}; 
 
             if (perView == 1) {
                 options = {
-                    ...config,
+                    ...options,
                     slidesPerView: 1,
                     spaceBetween: 0,
                     breakpoints: {},
                 } 
-            } else {
-                options = config;
+            }
+            if (autoplay) {
+                options = {
+                    ...options,
+                    autoplay: {
+                        delay: 8000,
+                        disableOnInteraction: false
+                    },
+                }
             }
             const swiper = new Swiper($this, options);
 

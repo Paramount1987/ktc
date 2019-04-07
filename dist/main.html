@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KTC</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?1554583989158">
+    <link rel="stylesheet" href="css/style.css?1554628592165">
     <style>
             #preloader {
               position: fixed;
@@ -116,7 +116,8 @@
     <div class="swiper-container intro-slider js-intro-slider">
     <div class="intro-slider__title">Комтехсервис</div>
   <div class="swiper-wrapper">
-    <div class="swiper-slide intro-slide" style="background-image: url('images/temp/m-slide1.jpg')">
+    <div class="swiper-slide intro-slide" >
+      <div class="intro-slide__pic" style="background-image: url('images/temp/m-slide1.jpg')"></div>
       <div class="intro-slide-inner">
         <div class="intro-slide__title">
           Проектирование и&nbsp;производство широкого ряда&nbsp;спецтехники
@@ -124,7 +125,8 @@
         <div class="ia-card">
           <div class="ia-card-top">
             <div class="ia-card__num">
-              >4000<span class="sm">м<sup>2</sup></span>
+              ><span class="spincrement" data-from="0" data-to="4000">4000</span>
+              <span class="sm">м<sup>2</sup></span>
             </div>
           </div>
           <div class="ia-card-body">
@@ -135,7 +137,8 @@
         </div>
       </div>
     </div>
-    <div class="swiper-slide intro-slide" style="background-image: url('images/temp/m-slide2.jpg')">
+    <div class="swiper-slide intro-slide">
+      <div class="intro-slide__pic" style="background-image: url('images/temp/m-slide2.jpg')"></div>
         <div class="intro-slide-inner">
           <div class="intro-slide__title">
             Проектирование и&nbsp;производство широкого ряда&nbsp;спецтехники 2
@@ -143,7 +146,8 @@
           <div class="ia-card">
             <div class="ia-card-top">
               <div class="ia-card__num">
-                >5000<span class="sm">м<sup>2</sup></span>
+                ><span class="spincrement" data-from="0" data-to="5000">5000</span>
+                <span class="sm">м<sup>2</sup></span>
               </div>
             </div>
             <div class="ia-card-body">
@@ -263,7 +267,7 @@
           <div class="ia-card">
             <div class="ia-card-top">
               <div class="ia-card__num">
-                >14
+                ><span class="js-spincrement" data-from="1" data-to="14"></span>
               </div>
               <div class="ia-card__text">
                 лет
@@ -280,7 +284,7 @@
           <div class="ia-card">
             <div class="ia-card-top">
               <div class="ia-card__num">
-                >60
+                ><span class="js-spincrement" data-from="1" data-to="60"></span>
               </div>
             </div>
             <div class="ia-card-body">
@@ -294,7 +298,7 @@
           <div class="ia-card">
             <div class="ia-card-top">
               <div class="ia-card__num">
-                >300
+                ><span class="js-spincrement" data-from="1" data-to="300"></span>
               </div>
               <div class="ia-card__text">
                 единиц техники
@@ -420,7 +424,7 @@
     </a>
   </div>
   <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
+  <div class="swiper-pagination no-anim"></div>
 </div>
     </div>
 </div>
@@ -525,7 +529,7 @@
     </div>
 </footer>
 
-<script src="js/index.js?1554583989160"></script>
+<script src="js/index.js?1554628592168"></script>
 <script>
         var map;
         var myLatLng = {lat: 55.75694, lng: 37.6094};

@@ -32,7 +32,7 @@
         box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.09);
         .news-card__arrow {
             opacity: 1;
-            transform: translateX(10px);
+            transform: translateX(12px);
         }
         .news-card__title {
             color: $blue;
@@ -81,7 +81,7 @@
         right: 30px;
         color: $blue;
         opacity: 0;
-        transition: all .15s
+        transition: all .3s ease-in-out;
     }
 }
 

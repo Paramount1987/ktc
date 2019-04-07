@@ -63,6 +63,10 @@
       outline: none;
       border-bottom: 1px solid rgba($white, 0.5);
     }
+
+    &.has-error {
+      border-bottom: 1px solid red !important;
+    }
   }
   &__sp {
     font-size: 12px;
