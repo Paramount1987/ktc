@@ -1,0 +1,15 @@
+.fade-hide {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+
+  &.is-ready {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

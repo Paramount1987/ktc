@@ -21,6 +21,8 @@ const App = {
     this.mlpArrowsClickHandler();
     
     this.spincrementScroll();
+
+    this.initFadeClass();
     this.fadeInElement();
   },
 
@@ -147,6 +149,10 @@ const App = {
     });
   },
 
+  initFadeClass() {
+    $('.js-fade-in').addClass('fade-hide');
+  },
+
   fadeInElement() {
     $('.js-fade-in').each(function () {
       new Waypoint({
@@ -155,7 +161,7 @@ const App = {
           const $el = $(this.element);
           $el.addClass('is-ready')
         },
-        offset: '75%'
+        offset: '85%'
       })
     });
   }
