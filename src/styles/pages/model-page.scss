@@ -129,7 +129,8 @@
     text-align: center;
     line-height: 20px;
     cursor: pointer;
-    &:hover {
+    &:hover,
+    &.is-active {
       color: $blue;
       border-color: $blue;
     }

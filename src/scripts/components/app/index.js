@@ -8,7 +8,8 @@ const App = {
     this.$mlpBtnClose = $('.js-mlp-btn-close');
     this.$mlpPopupTitle = $('.js-mlp-title');
     this.$mlpPopupContent = $('.js-mlp-content');
-    this.mlpTotalPoints = $('.js-mlp-point').length;
+    this.$points = $('.js-mlp-point');
+    this.mlpTotalPoints = this.$points.length;
     this.currentPoint = 1;
 
     this.hidePreloader();
@@ -65,6 +66,7 @@ const App = {
   mlpPopupClose() {
     this.$mlpPopupContainer.fadeOut(100);
     this.$body.removeClass('mlp-popup');
+    this.$points.removeClass('is-active');
   },
 
   updateMlpContent(popupId) {
@@ -74,6 +76,7 @@ const App = {
 
     this.$mlpPopupTitle.text(title);
     this.$mlpPopupContent.html(content);
+    $('.js-mlp-point').eq(popupId - 1).addClass('is-active');
 
     setTimeout(() => this.nanoScrollUpdate(), 150);
   },
@@ -92,8 +95,13 @@ const App = {
   mlpPointClickHanlder() {
     const _this= this;
 
-    $('.js-mlp-point').click(function() {
-      _this.currentPoint = $(this).data('ref');
+    this.$points.click(function() {
+      const $this = $(this);
+
+      _this.currentPoint = $this.data('ref');
+
+      _this.$points.removeClass('is-active');
+      $this.addClass('is-active');
 
       _this.updateMlpContent(_this.currentPoint);
       _this.mlpPopupShow();
@@ -116,8 +124,8 @@ const App = {
         this.currentPoint++;
       }
 
+      this.$points.removeClass('is-active');
       this.updateMlpContent(this.currentPoint);
-      
     });
     $('.js-mlp-prev').click(() => {
       if (this.currentPoint - 1 < 1) {
@@ -126,6 +134,7 @@ const App = {
         this.currentPoint--;
       }
 
+      this.$points.removeClass('is-active');
       this.updateMlpContent(this.currentPoint);
     });
   },
