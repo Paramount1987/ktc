@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KTC</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?1554699527188">
+    <link rel="stylesheet" href="css/style.css?1554749207711">
     <style>
             #preloader {
               position: fixed;
@@ -47,7 +47,7 @@
                 <a class="phones__link" href="tel:8 800 250-83-03">8 800 250-83-03</a>
               </p>
               <p>
-                <a class="phones__link-tx op7" href="#">Заказать звонок</a>
+                <a class="phones__link-tx op7 js-popup-form" href="#modal-call-form">Заказать звонок</a>
               </p>
             </div>
           </div>
@@ -371,6 +371,63 @@
 
 </div>
 
+<!-- form itself -->
+<form class="feedback-form form-modal mfp-hide bg-white" id="modal-call-form">
+    <h2 class="h2 mb-1">Заказать звонок</h2>
+    <p class="mb-3">Заполните форму и мы свяжемся с вами</p>
+    <div class="feedback-form-row">
+        <div class="feedback-form-col w-100"><input class="feedback-form__input" id="" name="" placeholder="Ваше имя" type="text"></div>
+        <div class="feedback-form-col w-100"><input class="feedback-form__input" id="" name="" placeholder="Телефон" type="text"></div>
+        <div class="feedback-form-col w-100"><input class="feedback-form__input" id="" name="" placeholder="E-mail" type="text"></div>
+    </div>
+
+    <div class="feedback-form-row mb-4 mb-sm-2">
+        <div class="feedback-form-col">
+            <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" id="customControlAutosizing" type="checkbox">
+                <label class="custom-control-label" for="customControlAutosizing">Принимаю политику конфиденциальности</label>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-form-row">
+        <div class="feedbakc-form-col">
+            <button class="btn btn-blue">Отправить заявку</button>
+        </div>
+    </div>
+</form>
+<form class="feedback-form form-modal form-modal--lg mfp-hide bg-white" id="modal-model-form">
+    <h2 class="h2 mb-2">Запросить техническое
+                        описание модели</h2>
+    <p class="form-modal__descr mb-3">Заполните форму и мы пришлем делатьную информацию по моделям спецтехнике.</p>
+    <div class="feedback-form-row feedback-form-row--frst">
+        <div class="feedback-form-col"><input class="feedback-form__input" id="" name="" placeholder="Ваше имя" type="text"></div>
+        <div class="feedback-form-col"><input class="feedback-form__input" id="" name="" placeholder="Телефон" type="text"></div>
+        <div class="feedback-form-col">
+            <input class="feedback-form__input has-error" id="" name="" placeholder="E-mail" type="text">
+            <div class="input-error">Ошибка в электронном адресе</div>
+        </div>
+    </div>
+    <div class="feedback-form-row">
+        <div class="feedback-form-col mb-2">
+            <input class="feedback-form__input" id="" name="" placeholder="Сообщение" type="text">
+            <span class="feedback-form__sp">Модель, модификацию или интересующий вас вопрос</span>
+        </div>
+    </div>
+    <div class="feedback-form-row mb-4 mb-sm-2">
+        <div class="feedback-form-col">
+            <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" id="customControlAutosizing" type="checkbox">
+                <label class="custom-control-label" for="customControlAutosizing">Принимаю политику конфиденциальности</label>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-form-row">
+        <div class="feedbakc-form-col">
+            <button class="btn btn-blue">Запросить описание</button>
+        </div>
+    </div>
+</form>
+
 <footer class="footer">
     <div class="footer-inner">
         <div class="container">
@@ -419,7 +476,7 @@
                             <a class="phones__link" href="tel:+7 (83534) 2-12-51">+7 (83534) 2-12-51</a>
                         </p>
                         <p>
-                            <a class="phones__link-tx op7" href="#">Заказать звонок</a>
+                            <a class="phones__link-tx op7 js-popup-form" href="#modal-call-form">Заказать звонок</a>
                         </p>
                     </div>
                 </div>
@@ -468,7 +525,7 @@
     </div>
 </footer>
 
-<script src="js/index.js?1554699527193"></script>
+<script src="js/index.js?1554749207715"></script>
 <script>
         var map;
         var myLatLng = {lat: 55.75694, lng: 37.6094};
