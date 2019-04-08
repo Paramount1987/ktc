@@ -1,29 +1,33 @@
-@import "header";
-@import "nav";
-@import "footer";
-@import "socials";
-@import "phones";
-@import "ctx-card";
-@import "intro-about";
-@import "intro-slider";
-@import "gallery-slider";
-@import "service-list";
-@import "feedback";
+@import 'header';
+@import 'nav';
+@import 'footer';
+@import 'socials';
+@import 'phones';
+@import 'ctx-card';
+@import 'intro-about';
+@import 'intro-slider';
+@import 'gallery-slider';
+@import 'service-list';
+@import 'feedback';
 
-.wrapper{
-    overflow: hidden;
+.wrapper {
+  overflow: hidden;
+
+  .mfp-open & {
+    filter: blur(4px);
+  }
 }
 
 body {
-    &.is-nav-open {
-        overflow: hidden;
-    }
+  &.is-nav-open {
+    overflow: hidden;
+  }
 }
 
 @include media-breakpoint-up(md) {
-    body {
-        &.is-nav-open {
-            overflow: auto;
-        }
+  body {
+    &.is-nav-open {
+      overflow: auto;
     }
+  }
 }

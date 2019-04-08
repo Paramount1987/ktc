@@ -16,6 +16,10 @@
     p {
         margin-bottom: 0;
     }
+
+    .mfp-open & {
+        filter: blur(4px);
+    }
 }
 
 .footer-row {

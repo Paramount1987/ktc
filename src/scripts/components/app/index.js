@@ -24,6 +24,8 @@ const App = {
 
     this.initFadeClass();
     this.fadeInElement();
+
+    this.initPopupForm();
   },
 
   hidePreloader() {
@@ -163,6 +165,32 @@ const App = {
         },
         offset: '85%'
       })
+    });
+  },
+
+  initPopupForm() {
+    const _this = this;
+    $('.js-popup-form').magnificPopup({
+      type: 'inline',
+      preloader: false,
+      focus: '#name',
+  
+      // When elemened is focused, some mobile browsers in some cases zoom in
+      // It looks not nice, so we disable it:
+      callbacks: {
+        beforeOpen: function() {
+          _this.$body.addClass('mfp-open');
+
+          if($(window).width() < 700) {
+            this.st.focus = false;
+          } else {
+            this.st.focus = '#name';
+          }
+        },
+        beforeClose: function() {
+          _this.$body.removeClass('mfp-open');
+        },
+      }
     });
   }
 };

@@ -65,7 +65,22 @@
     }
 
     &.has-error {
-      border-bottom: 1px solid red !important;
+      color: $red;
+      border-bottom: 1px solid $red !important;
+      &::placeholder {
+        color: $red !important;
+      }
+    }
+
+    .bg-white & {
+      color: $dark;
+      border-bottom: 1px solid $dark;
+      &:focus {
+        border-bottom: 1px solid $blue;
+      }
+      &::placeholder {
+        color: $dark;
+      }
     }
   }
   &__sp {
@@ -103,6 +118,7 @@
   .feedback-form {
     &-row {
       display: flex;
+      flex-wrap: wrap;
     }
     &-col {
       width: 100%;
@@ -112,6 +128,9 @@
       margin-bottom: 15px;
       .feedback-form-col {
         width: 30%;
+        &.w-100 {
+          width: 100%;
+        }
       }
     }
   }

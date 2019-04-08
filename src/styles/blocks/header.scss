@@ -55,6 +55,10 @@
       display: none;
     }
   }
+
+  .mfp-open & {
+    filter: blur(4px);
+  }
 }
 
 .header-nav {

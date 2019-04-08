@@ -38,6 +38,9 @@
     {% block content %}{% endblock %}
 </div>
 
+{% include "tpl/inc/blocks/popup-call-form.twig" %}
+{% include "tpl/inc/blocks/popup-model-form.twig" %}
+
 {% include 'tpl/inc/footer.twig' %}
 
 <script src="js/index.js?{{ date().getTime() }}"></script>
