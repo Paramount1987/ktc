@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KTC</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?1554749207711">
+    <link rel="stylesheet" href="css/style.css?1554836056903">
     <style>
             #preloader {
               position: fixed;
@@ -193,8 +193,8 @@
                 </div>
             </div>
 
-            <div class="ctp-map">
-    <a class="ctp-map__link js-map-link" href="#ctp-map">
+            <div class="ctp-map" id="ctp-map-cont">
+    <a class="ctp-map__link js-map-link" href="#ctp-map-cont">
         <span class="ctp-map__link-open">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="34" viewBox="0 0 24 34">
     <path fill="#0091FF" fill-rule="evenodd" d="M12 0C5.366 0 0 5.321 0 11.9 0 20.825 12 34 12 34s12-13.175 12-22.1C24 5.321 18.634 0 12 0zm0 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
@@ -525,35 +525,45 @@
     </div>
 </footer>
 
-<script src="js/index.js?1554749207715"></script>
-<script>
-        var map;
-        var myLatLng = {lat: 55.75694, lng: 37.6094};
+<script src="js/index.js?1554836056906"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=894ac2d9-ca7f-4833-8943-360567e9e29b&lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("ctp-map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.75694, 37.60946],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 14,
+            controls: []
+        });
 
-        function initMap() {
-          map = new google.maps.Map(document.getElementById('ctp-map'), {
-            center: {lat: 55.75694, lng: 37.60946},
-            zoom: 18,
-            disableDefaultUI: true
-          });
+        myPlacemark = new ymaps.Placemark([55.75694, 37.60946], {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/content/i-marker-2x.png',
+            // Размеры метки.
+            iconImageSize: [43, 60],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-1, -1]
+        });
 
-          var image = {
-            url: 'images/content/i-marker-2x.png',
-            size: new google.maps.Size(86, 120),
-            // The origin for this image is (0, 0).
-            origin: new google.maps.Point(0, 0),
-            // The anchor for this image is the base of the flagpole at (0, 32).
-            anchor: new google.maps.Point(0, 60),
-            scaledSize: new google.maps.Size(43, 60)
-          }
-
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            icon: image
-          });
-        }
-      </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLiSH02TkHWQS0F-SxzhweJg_zcq-IA4&callback=initMap" async defer></script>
+        myMap.geoObjects
+        .add(myPlacemark);
+    }
+</script>
 </body>
 </html>
