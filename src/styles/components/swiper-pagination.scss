@@ -25,10 +25,12 @@
         }
     }
 
-    .no-anim & {
+    .no-anim &,
+    .ie & {
         &-active {
             .svg__circle-anim {
-                animation: circleDraw 0s linear forwards;
+                animation: none;
+                stroke-dashoffset: 0 !important;
             }
         }
     }

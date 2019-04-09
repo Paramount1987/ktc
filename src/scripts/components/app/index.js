@@ -40,8 +40,8 @@ const App = {
       const target = $this.attr('href');
 
       $this.toggleClass('is-opened');
-      $(target).slideToggle();
-    })
+      $(target).toggleClass('is-opened');
+    });
   },
 
   toggleTab() {
