@@ -86,6 +86,19 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .header {
+
+    .is-nav-open & {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+    }
+  }
+}
+
 @include media-breakpoint-up(sm) {
   .header {
     padding: 30px 0 0 0;
