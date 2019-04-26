@@ -30,6 +30,7 @@ const config = {
 const gallery = {
     init() {
         this.initSlider();
+        this.initImagePopup();
     },
 
     initSlider() {
@@ -59,7 +60,19 @@ const gallery = {
 
             $this.on('shown.bs.tab', function (e) {
                 swiper.update();
+                swiper.slideTo(0);
             });
+        });
+    },
+
+    initImagePopup() {
+        $('.js-image-popup').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-img-mobile',
+            image: {
+                verticalFit: true
+            }
         });
     },
 };

@@ -86,7 +86,7 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xs) {
   .header {
 
     .is-nav-open & {
@@ -96,6 +96,14 @@
       right: 0;
       z-index: 20;
     }
+
+    &-static {
+      margin-bottom: 0;
+    }
+  }
+
+  body.is-nav-open {
+    padding-top: 65px;
   }
 }
 

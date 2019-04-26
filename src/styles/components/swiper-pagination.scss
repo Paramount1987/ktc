@@ -49,6 +49,42 @@
     }
 }
 
+.swiper-button-prev--short,
+.swiper-button-next--short {
+    width: 18px !important;
+    overflow: hidden;
+    transition: width .2s;
+
+    &:hover {
+        width: 53px !important;
+        color: $blue;
+    }
+}
+.swiper-button-next--short {
+    left: 100%;
+    right: auto;
+    transform: translate3d(-53px, 0, 0);
+
+    svg {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+    }
+}
+.swiper-button-prev--short {
+    left: auto;
+    right: 100%;
+    transform: translate3d(53px, 0, 0) rotate(-180deg) !important;
+
+    svg {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+    }
+}
+
 @keyframes circleDraw {
     to {
         stroke-dashoffset: 0;

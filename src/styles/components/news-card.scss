@@ -27,6 +27,7 @@
   color: $dark;
   text-decoration: none;
   transition: box-shadow 0.15s;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.09);
