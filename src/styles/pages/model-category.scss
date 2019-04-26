@@ -25,6 +25,9 @@
 }
 
 @include media-breakpoint-up(sm) {
+  .mc-title-row {
+    flex-wrap: nowrap;
+  }
   .mc-title-sub {
   
     &__num {
