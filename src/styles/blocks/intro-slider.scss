@@ -122,12 +122,16 @@
         height: 768px;
         overflow: visible;
         &__title {
-            max-width: 1280px;
-            margin: 0 auto;
             top: 200px;
-            left: 100px;
+            padding-left: 100px;
+            padding-right: 20px;
             text-align: left;
             font-size: 22px;
+            .txt-sp {
+                display: block;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
         }
 
         &-fraction {
@@ -245,8 +249,10 @@
 @include media-breakpoint-up(lg) {
     .intro-slider {
         &__title {
-            left: 0;
-            padding-left: 110px;
+
+            .txt-sp {
+                padding-left: 70px;
+            }
         }
 
         &-fraction {
