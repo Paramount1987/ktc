@@ -79,7 +79,7 @@
   transition: width .2s;
   cursor: pointer;
 
-  &:hover {
+  .no-touchevents &:hover {
     width: 53px;
     color: $blue;
   }
