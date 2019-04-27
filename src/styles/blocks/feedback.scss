@@ -43,7 +43,20 @@
 
 .feedback-form {
   &-col {
+    position: relative;
     margin-bottom: 30px;
+
+    .floating-label {
+      position: absolute;
+      z-index: 1;
+      top: -2px;
+      left: 0;
+      font-size: 15px;
+      line-height: 1.4;
+      pointer-events: none;
+      transition: 0.2s ease all;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   &__input {
@@ -63,11 +76,18 @@
       outline: none;
       border-bottom: 1px solid rgba($white, 0.5);
     }
+    &:focus ~ .floating-label,
+    &:not(:focus):valid ~ .floating-label{
+      font-size: 8px;
+      opacity: .5;
+      transform: translate3d(0, -13px, 0);
+    }
 
     &.has-error {
       color: $red;
       border-bottom: 1px solid $red !important;
-      &::placeholder {
+      &::placeholder,
+      & ~ .floating-label {
         color: $red !important;
       }
     }

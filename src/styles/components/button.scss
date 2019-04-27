@@ -108,6 +108,10 @@ input[type="button"] {
 .btn-white {
   background-color: $white;
   color: $dark;
+  box-shadow: none;
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05), 0 10px 20px 0 rgba(40, 43, 48, 0.14);
+  }
 }
 .btn-blue {
   background-color: $blue;

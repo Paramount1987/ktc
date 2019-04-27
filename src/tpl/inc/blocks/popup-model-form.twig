@@ -3,16 +3,24 @@
                         описание модели</h2>
     <p class="form-modal__descr mb-3">Заполните форму и мы пришлем делатьную информацию по моделям спецтехнике.</p>
     <div class="feedback-form-row feedback-form-row--frst">
-        <div class="feedback-form-col"><input class="feedback-form__input" id="" name="" placeholder="Ваше имя" type="text"></div>
-        <div class="feedback-form-col"><input class="feedback-form__input" id="" name="" placeholder="Телефон" type="text"></div>
         <div class="feedback-form-col">
-            <input class="feedback-form__input has-error" id="" name="" placeholder="E-mail" type="text">
+            <input class="feedback-form__input" id="" name="" type="text" required>
+            <span class="floating-label">Ваше имя</span>
+        </div>
+        <div class="feedback-form-col">
+            <input class="feedback-form__input" id="" name="" type="text" required>
+            <span class="floating-label">Телефон</span>
+        </div>
+        <div class="feedback-form-col">
+            <input class="feedback-form__input has-error" id="" name="" type="text" required>
+            <span class="floating-label">E-mail</span>
             <div class="input-error">Ошибка в электронном адресе</div>
         </div>
     </div>
     <div class="feedback-form-row">
         <div class="feedback-form-col mb-2">
-            <input class="feedback-form__input" id="" name="" placeholder="Сообщение" type="text">
+            <input class="feedback-form__input" id="" name="" type="text" required>
+            <span class="floating-label">Сообщение</span>
             <span class="feedback-form__sp">Модель, модификацию или интересующий вас вопрос</span>
         </div>
     </div>
