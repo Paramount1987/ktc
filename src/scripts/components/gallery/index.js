@@ -66,12 +66,19 @@ const gallery = {
     },
 
     initImagePopup() {
-        $('.js-image-popup').magnificPopup({
+        $('.js-popup-gallery').magnificPopup({
+            delegate: 'a',
             type: 'image',
-            closeOnContentClick: true,
+            tLoading: 'Loading image #%curr%...',
             mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                tCounter: '<span class="mfp-counter">%curr% из %total%</span>', // markup of counter
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
             image: {
-                verticalFit: true
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
             }
         });
     },
